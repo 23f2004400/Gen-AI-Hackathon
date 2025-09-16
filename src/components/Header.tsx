@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-                PathSathi
+                Astral
               </h1>
               <p className="text-xs text-gray-600 font-hindi">पाथसाथी - आपका करियर साथी</p>
             </div>

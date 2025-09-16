@@ -96,9 +96,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
-                Learn More
-              </button>
+              
             </div>
           </div>
         </div>
@@ -133,7 +131,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose PathSathi?
+              Why Choose Astral?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We understand the unique challenges faced by Indian students and provide personalized, practical solutions

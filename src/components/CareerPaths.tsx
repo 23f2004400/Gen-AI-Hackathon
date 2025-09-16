@@ -16,55 +16,64 @@ const CareerPaths: React.FC<CareerPathsProps> = ({ profile, onBack }) => {
   const [showRoadmap, setShowRoadmap] = useState(false);
 
   useEffect(() => {
-    const loadRecommendations = async () => {
-      try {
-        const paths = await AIService.generateCareerRecommendations(profile);
-        setRecommendations(paths);
-      } catch (error) {
-        console.error('Error loading recommendations:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const loadRecommendations = async () => {
+    try {
+      const paths = await AIService.generateCareerRecommendations(profile) || [];
+      setRecommendations(paths);
+    } catch (error) {
+      console.error("Error loading recommendations:", error);
+      setRecommendations([]);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    loadRecommendations();
-  }, [profile]);
+  loadRecommendations();
+}, [profile]);
+
 
   const handleSelectPath = (path: CareerPath) => {
     setSelectedPath(path);
     setShowRoadmap(true);
   };
 
-  const generateParentBrief = (path: CareerPath) => {
+const generateParentBrief = async (path: CareerPath) => {
+  try {
     const brief: ParentBrief = {
       studentName: profile.name,
       chosenPath: path,
       timeline: path.timeline,
       supportTips: [
-        'Encourage daily practice and skill-building activities',
-        'Help create a dedicated study space at home',
-        'Support their project work and portfolio development',
-        'Connect them with industry professionals when possible',
-        'Celebrate small wins and progress milestones',
-        'Be patient during the learning process - skills take time to develop'
+        "Encourage daily practice and skill-building activities",
+        "Help create a dedicated study space at home",
+        "Support their project work and portfolio development",
+        "Connect them with industry professionals when possible",
+        "Celebrate small wins and progress milestones",
+        "Be patient during the learning process - skills take time to develop"
       ],
       expectedOutcomes: [
         `Entry-level position in ${path.entryRoles[0]} within ${path.timeline}`,
         `Starting salary range: ₹${path.salaryRange.entry.toLocaleString()} - ₹${(path.salaryRange.entry * 1.5).toLocaleString()}`,
         `Career growth potential to ₹${path.salaryRange.experienced.toLocaleString()}+ with experience`,
-        'Strong portfolio of practical projects and certifications',
-        'Industry-relevant skills that are in high demand',
-        'Network of peers and mentors in the chosen field'
+        "Strong portfolio of practical projects and certifications",
+        "Industry-relevant skills that are in high demand",
+        "Network of peers and mentors in the chosen field"
       ],
       budgetBreakdown: {
         courses: path.courses.reduce((sum, course) => sum + course.cost, 0),
         materials: Math.min(profile.budget * 0.2, 15000),
-        total: path.courses.reduce((sum, course) => sum + course.cost, 0) + Math.min(profile.budget * 0.2, 15000)
+        total:
+          path.courses.reduce((sum, course) => sum + course.cost, 0) +
+          Math.min(profile.budget * 0.2, 15000)
       }
     };
 
-    PDFService.generateParentBrief(brief);
-  };
+    await PDFService.generateParentBrief(brief);
+  } catch (error) {
+    console.error("Error generating parent brief:", error);
+  }
+};
+
 
   if (loading) {
     return (

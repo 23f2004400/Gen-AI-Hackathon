@@ -4,8 +4,8 @@ export interface UserProfile {
   age: number;
   location: string;
   interests: string[];
-  budget: number;
-  timeAvailable: number;
+  budget: number;              // for filtering courses
+  timeAvailable: number;       // in hours per week
   learningStyle: 'visual' | 'auditory' | 'kinesthetic' | 'mixed';
   examHistory: {
     class10: number;
@@ -39,24 +39,33 @@ export interface CareerPath {
     entry: number;
     experienced: number;
   };
-  courses: Course[];
+  courses: Course[];             // curated courses (manual or static)
   projects: Project[];
   ncoCode: string;
   matchScore: number;
+
+  // 🔹 AI-enhanced fields
   aiAnalysis?: string;
+  aiNotes?: string;
+  aiCourses?: Course[];          // Gemini-suggested courses (dynamic)
+  localInstitutes?: string[];    // nearby institutions (can integrate later)
+  aiMarketTrends?: string;       // optional: trends from Gemini
+  aiSkillGaps?: string[];        // optional: identified gaps
 }
 
 export interface Course {
   id: string;
   title: string;
   provider: 'SWAYAM' | 'NPTEL' | 'Other';
-  duration: string;
+  duration: string;              // e.g. "6 weeks", "40 hours"
   cost: number;
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   skills: string[];
   url: string;
   rating: number;
   language: string[];
+  relevanceScore?: number;       // 🔹 for ranking by Gemini
+  recommendedFor?: string[];     // 🔹 AI can map to specific roles/skills
 }
 
 export interface Project {
