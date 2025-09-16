@@ -1,4 +1,5 @@
 import { CareerPath } from '../types';
+import { courses } from './courses';
 
 export const careerPaths: CareerPath[] = [
   {
@@ -16,7 +17,14 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '2512',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'python-basics')!,
+      courses.find(c => c.id === 'database-management')!,
+      courses.find(c => c.id === 'business-communication')!
+    ],
+    localInstitutes: []
   },
   {
     id: 'data-associate',
@@ -33,7 +41,14 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '2120',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'excel-advanced')!,
+      courses.find(c => c.id === 'data-science-intro')!,
+      courses.find(c => c.id === 'python-basics')!
+    ],
+    localInstitutes: []
   },
   {
     id: 'digital-marketing',
@@ -50,7 +65,13 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '2431',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'digital-marketing-fundamentals')!,
+      courses.find(c => c.id === 'business-communication')!
+    ],
+    localInstitutes: []
   },
   {
     id: 'ux-designer',
@@ -67,7 +88,13 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '2166',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'ui-ux-design')!,
+      courses.find(c => c.id === 'web-development')!
+    ],
+    localInstitutes: []
   },
   {
     id: 'bca-developer',
@@ -84,7 +111,14 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '2511',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'python-basics')!,
+      courses.find(c => c.id === 'web-development')!,
+      courses.find(c => c.id === 'database-management')!
+    ],
+    localInstitutes: []
   },
   {
     id: 'open-uni-business',
@@ -101,6 +135,12 @@ export const careerPaths: CareerPath[] = [
     courses: [],
     projects: [],
     ncoCode: '1211',
-    matchScore: 0
+    matchScore: 0,
+    aiNotes: '',
+    aiCourses: [
+      courses.find(c => c.id === 'business-communication')!,
+      courses.find(c => c.id === 'excel-advanced')!
+    ],
+    localInstitutes: []
   }
 ];

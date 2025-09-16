@@ -10,6 +10,7 @@ import WellbeingCheck from './components/WellbeingCheck';
 import CrisisSupport from './components/CrisisSupport';
 import { UserProfile, WellbeingCheck as WellbeingCheckType } from './types';
 import { AIService } from './services/aiServices';
+import { careerPaths } from './data/careers';
 
 type AppState = 'home' | 'features' | 'emergency' | 'intake' | 'paths' | 'wellbeing';
 type AuthState = { isAuthenticated: boolean; user: { name: string; email: string } | null };
@@ -34,7 +35,6 @@ function App() {
   };
 
   const handleAuthSubmit = (data: any) => {
-    // Simulate authentication
     setAuthState({
       isAuthenticated: true,
       user: { name: data.name || 'User', email: data.email }
@@ -68,15 +68,26 @@ function App() {
     setCurrentState('wellbeing');
   };
 
-  const handleWellbeingComplete = (wellbeing: WellbeingCheckType) => {
-    const message = AIService.generateMotivationalMessage(wellbeing);
-    setMotivationalMessage(message);
-    
-    if (wellbeing.riskLevel === 'crisis' || wellbeing.riskLevel === 'high') {
-      setShowCrisisSupport(true);
+  const handleWellbeingComplete = async (wellbeing: WellbeingCheckType) => {
+    try {
+      if (!userProfile) {
+        console.error("No user profile found. Cannot generate message.");
+        return;
+      }
+
+      const message = await AIService.generateMotivationalMessage(wellbeing, userProfile);
+      setMotivationalMessage(message);
+
+      if (wellbeing.riskLevel === "crisis" || wellbeing.riskLevel === "high") {
+        setShowCrisisSupport(true);
+      }
+
+      setCurrentState("paths");
+    } catch (error) {
+      console.error("Error generating motivational message:", error);
+      setMotivationalMessage("Stay strong! Better days are ahead. 🌟");
+      setCurrentState("paths");
     }
-    
-    setCurrentState('paths');
   };
 
   const handleBackToHome = () => {
@@ -94,48 +105,45 @@ function App() {
     switch (currentState) {
       case 'home':
         return <HomePage onStartJourney={handleStartJourney} />;
-      
+
       case 'features':
         return <FeaturesSection />;
-      
+
       case 'emergency':
         return <EmergencySection />;
-      
+
       case 'intake':
-        if (!authState.isAuthenticated) {
-          return <HomePage onStartJourney={handleStartJourney} />;
-        }
-        return (
-          <IntakeForm 
-            onComplete={handleIntakeComplete}
-            onBack={() => setCurrentState('home')}
-          />
+        return authState.isAuthenticated ? (
+          <IntakeForm onComplete={handleIntakeComplete} onBack={handleBackToHome} />
+        ) : (
+          <HomePage onStartJourney={handleStartJourney} />
         );
-      
+
       case 'wellbeing':
-        if (!authState.isAuthenticated) {
-          return <HomePage onStartJourney={handleStartJourney} />;
-        }
-        return <WellbeingCheck onComplete={handleWellbeingComplete} />;
-      
+        return authState.isAuthenticated ? (
+          <WellbeingCheck onComplete={handleWellbeingComplete} />
+        ) : (
+          <HomePage onStartJourney={handleStartJourney} />
+        );
+
       case 'paths':
         if (!authState.isAuthenticated || !userProfile) {
           return <HomePage onStartJourney={handleStartJourney} />;
         }
-        return userProfile ? (
+        return (
           <div>
             {motivationalMessage && (
               <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white p-4 text-center">
                 <p className="font-medium">{motivationalMessage}</p>
               </div>
             )}
-            <CareerPaths 
+            <CareerPaths
               profile={userProfile}
               onBack={handleBackToIntake}
             />
           </div>
-        ) : null;
-      
+        );
+
       default:
         return <HomePage onStartJourney={handleStartJourney} />;
     }
@@ -150,12 +158,12 @@ function App() {
         onSubmit={handleAuthSubmit}
         onSwitchMode={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}
       />
-      
-      <CrisisSupport 
+
+      <CrisisSupport
         isVisible={showCrisisSupport}
         onClose={() => setShowCrisisSupport(false)}
       />
-      
+
       <Header
         isAuthenticated={authState.isAuthenticated}
         user={authState.user}
@@ -165,17 +173,14 @@ function App() {
         onNavigate={handleNavigate}
         currentSection={currentState}
       />
-      
-      <main>
-        {renderCurrentState()}
-      </main>
-      
-      {/* Footer */}
+
+      <main>{renderCurrentState()}</main>
+
       <footer className="bg-gray-900 text-white py-12 mt-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">PathSathi</h3>
+              <h3 className="text-lg font-semibold mb-4">Astral</h3>
               <p className="text-gray-400 text-sm">
                 Empowering Indian students to find their perfect career path through AI-powered guidance.
               </p>
@@ -199,13 +204,13 @@ function App() {
           </div>
           <div className="border-t border-gray-800 pt-6">
             <p className="text-gray-400 mb-2">
-              PathSathi - Empowering Indian students to find their perfect career path
+              Astral - Empowering Indian students to find their perfect career path
             </p>
             <p className="text-sm text-gray-500 font-hindi mb-4">
               पाथसाथी - भारतीय छात्रों को उनका सही करियर पथ खोजने में सशक्त बनाना
             </p>
             <p className="text-xs text-gray-500">
-              © 2024 PathSathi. Built with ❤️ for Indian students. For support: contact@pathsathi.in
+              © 2024 Astral. Built with ❤️ for Indian students. For support: contact@Astral.in
             </p>
           </div>
         </div>

@@ -45,7 +45,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
-                {mode === 'login' ? 'Welcome Back!' : 'Join PathSathi'}
+                {mode === 'login' ? 'Welcome Back!' : 'Join Astral'}
               </h2>
               <p className="text-gray-600 font-hindi">
                 {mode === 'login' ? 'वापस स्वागत है!' : 'पाथसाथी में शामिल हों'}

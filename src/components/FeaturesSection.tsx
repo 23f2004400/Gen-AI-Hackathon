@@ -73,7 +73,7 @@ const FeaturesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose PathSathi?
+            Why Choose Astral?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
             We understand the unique challenges faced by Indian students and provide personalized, practical solutions
