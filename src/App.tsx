@@ -207,10 +207,10 @@ function App() {
               Astral - Empowering Indian students to find their perfect career path
             </p>
             <p className="text-sm text-gray-500 font-hindi mb-4">
-              पाथसाथी - भारतीय छात्रों को उनका सही करियर पथ खोजने में सशक्त बनाना
+              एस्ट्रल - भारतीय छात्रों को उनका सही करियर पथ खोजने में सशक्त बनाना
             </p>
             <p className="text-xs text-gray-500">
-              © 2024 Astral. Built with ❤️ for Indian students. For support: contact@Astral.in
+              © 2025 Astral. Built with ❤️ for Indian students.
             </p>
           </div>
         </div>

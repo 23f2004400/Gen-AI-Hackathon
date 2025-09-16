@@ -12,7 +12,7 @@ export class PDFService {
     doc.setFontSize(20);
     doc.setFont('helvetica', 'bold');
     doc.text('Astral - Career Plan Summary', margin, yPosition);
-    doc.text('पाथसाथी - करियर योजना सारांश', margin, yPosition + 10);
+    doc.text('एस्ट्रल - करियर योजना सारांश', margin, yPosition + 10);
     
     yPosition += 30;
     

@@ -48,7 +48,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
                 {mode === 'login' ? 'Welcome Back!' : 'Join Astral'}
               </h2>
               <p className="text-gray-600 font-hindi">
-                {mode === 'login' ? 'वापस स्वागत है!' : 'पाथसाथी में शामिल हों'}
+                {mode === 'login' ? 'वापस स्वागत है!' : 'एस्ट्रल में शामिल हों'}
               </p>
             </div>
             <button
