@@ -18,14 +18,14 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
   const [loading, setLoading] = useState(false);
 
   const concernOptions = [
-    { value: 'academic', label: 'Academic Pressure', labelHindi: 'शैक्षणिक दबाव' },
-    { value: 'family', label: 'Family Expectations', labelHindi: 'पारिवारिक अपेक्षाएं' },
-    { value: 'future', label: 'Uncertain Future', labelHindi: 'अनिश्चित भविष्य' },
-    { value: 'financial', label: 'Financial Worries', labelHindi: 'वित्तीय चिंताएं' },
-    { value: 'social', label: 'Social Comparison', labelHindi: 'सामाजिक तुलना' },
-    { value: 'confidence', label: 'Low Self-Confidence', labelHindi: 'कम आत्मविश्वास' },
-    { value: 'direction', label: 'Lack of Direction', labelHindi: 'दिशा की कमी' },
-    { value: 'support', label: 'Lack of Support', labelHindi: 'सहायता की कमी' }
+    { value: 'academic', label: 'Academic Pressure' },
+    { value: 'family', label: 'Family Expectations' },
+    { value: 'future', label: 'Uncertain Future'},
+    { value: 'financial', label: 'Financial Worries' },
+    { value: 'social', label: 'Social Comparison' },
+    { value: 'confidence', label: 'Low Self-Confidence' },
+    { value: 'direction', label: 'Lack of Direction' },
+    { value: 'support', label: 'Lack of Support'}
   ];
 
   const handleSubmit = async () => {
@@ -82,9 +82,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
           <p className="text-lg text-gray-600 mb-2">
             Your mental wellbeing is important to us. Let's check in.
           </p>
-          <p className="text-gray-500 font-hindi">
-            आपका मानसिक कल्याण हमारे लिए महत्वपूर्ण है। आइए जांच करते हैं।
-          </p>
+          
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -94,7 +92,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    Overall Mood / समग्र मूड
+                    Overall Mood 
                   </h3>
                   <p className="text-gray-600 text-sm">
                     How would you rate your mood today?
@@ -124,7 +122,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    Stress Level / तनाव का स्तर
+                    Stress Level 
                   </h3>
                   <p className="text-gray-600 text-sm">
                     How stressed are you feeling right now?
@@ -181,7 +179,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
             {/* Concerns */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                What's on your mind? / आपके मन में क्या है?
+                What's on your mind? 
               </h3>
               <p className="text-gray-600 text-sm mb-4">
                 Select any concerns you're currently facing. It's okay to have multiple concerns.
@@ -199,7 +197,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
                     }`}
                   >
                     <div className="font-medium">{option.label}</div>
-                    <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div>
+                    {/* <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div> */}
                   </button>
                 ))}
               </div>
@@ -208,7 +206,7 @@ const WellbeingCheck: React.FC<WellbeingCheckProps> = ({ onComplete }) => {
             {/* Additional Thoughts */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Anything else you'd like to share? / कुछ और साझा करना चाहते हैं?
+                Anything else you'd like to share? 
               </h3>
               <textarea
                 value={responses.additionalThoughts}

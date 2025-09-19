@@ -86,9 +86,7 @@ const generateParentBrief = async (path: CareerPath) => {
           <p className="text-gray-600">
             Our AI is finding the perfect career paths for you
           </p>
-          <p className="text-sm text-gray-500 font-hindi mt-2">
-            हमारा AI आपके लिए सही करियर पथ खोज रहा है
-          </p>
+          
         </div>
       </div>
     );
@@ -123,9 +121,7 @@ const generateParentBrief = async (path: CareerPath) => {
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">
                       {selectedPath.title}
                     </h2>
-                    <p className="text-gray-600 font-hindi mb-4">
-                      {selectedPath.titleHindi}
-                    </p>
+                    
                     <p className="text-gray-700">
                       {selectedPath.description}
                     </p>
@@ -342,9 +338,7 @@ const generateParentBrief = async (path: CareerPath) => {
           <p className="text-xl text-gray-600 mb-2">
             Based on your profile, here are the best career options for you, {profile.name}
           </p>
-          <p className="text-lg text-gray-500 font-hindi">
-            आपकी प्रोफ़ाइल के आधार पर, यहाँ आपके लिए सबसे अच्छे करियर विकल्प हैं
-          </p>
+          
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
@@ -370,9 +364,7 @@ const generateParentBrief = async (path: CareerPath) => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {path.title}
                 </h3>
-                <p className="text-sm text-gray-600 font-hindi mb-3">
-                  {path.titleHindi}
-                </p>
+                
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {path.description}
                 </p>

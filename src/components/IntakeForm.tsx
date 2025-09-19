@@ -34,32 +34,32 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
   });
 
   const steps = [
-    { title: 'Basic Info', titleHindi: 'बुनियादी जानकारी', icon: User },
-    { title: 'Interests', titleHindi: 'रुचियां', icon: Heart },
-    { title: 'Constraints', titleHindi: 'बाधाएं', icon: MapPin },
-    { title: 'Learning Style', titleHindi: 'सीखने की शैली', icon: Brain },
-    { title: 'Academic History', titleHindi: 'शैक्षणिक इतिहास', icon: BookOpen },
-    { title: 'Personality', titleHindi: 'व्यक्तित्व', icon: Brain }
+    { title: 'Basic Info', icon: User },
+    { title: 'Interests', icon: Heart },
+    { title: 'Constraints', icon: MapPin },
+    { title: 'Learning Style', icon: Brain },
+    { title: 'Academic History', icon: BookOpen },
+    { title: 'Personality', icon: Brain }
   ];
 
   const interestOptions = [
-    { value: 'technology', label: 'Technology & Computers', labelHindi: 'प्रौद्योगिकी और कंप्यूटर' },
-    { value: 'creative', label: 'Creative & Design', labelHindi: 'रचनात्मक और डिज़ाइन' },
-    { value: 'business', label: 'Business & Management', labelHindi: 'व्यापार और प्रबंधन' },
-    { value: 'healthcare', label: 'Healthcare & Medicine', labelHindi: 'स्वास्थ्य सेवा और चिकित्सा' },
-    { value: 'education', label: 'Education & Teaching', labelHindi: 'शिक्षा और अध्यापन' },
-    { value: 'engineering', label: 'Engineering & Technical', labelHindi: 'इंजीनियरिंग और तकनीकी' },
-    { value: 'arts', label: 'Arts & Entertainment', labelHindi: 'कला और मनोरंजन' },
-    { value: 'social', label: 'Social Work & NGO', labelHindi: 'सामाजिक कार्य और एनजीओ' }
+    { value: 'technology', label: 'Technology & Computers' },
+    { value: 'creative', label: 'Creative & Design'},
+    { value: 'business', label: 'Business & Management' },
+    { value: 'healthcare', label: 'Healthcare & Medicine' },
+    { value: 'education', label: 'Education & Teaching' },
+    { value: 'engineering', label: 'Engineering & Technical' },
+    { value: 'arts', label: 'Arts & Entertainment' },
+    { value: 'social', label: 'Social Work & NGO'}
   ];
 
   const constraintOptions = [
-    { value: 'budget', label: 'Limited Budget', labelHindi: 'सीमित बजट' },
-    { value: 'location', label: 'Location Restrictions', labelHindi: 'स्थान की बाधाएं' },
-    { value: 'family', label: 'Family Pressure', labelHindi: 'पारिवारिक दबाव' },
-    { value: 'language', label: 'Language Barriers', labelHindi: 'भाषा की बाधाएं' },
-    { value: 'time', label: 'Time Constraints', labelHindi: 'समय की बाधाएं' },
-    { value: 'confidence', label: 'Lack of Confidence', labelHindi: 'आत्मविश्वास की कमी' }
+    { value: 'budget', label: 'Limited Budget' },
+    { value: 'location', label: 'Location Restrictions' },
+    { value: 'family', label: 'Family Pressure'},
+    { value: 'language', label: 'Language Barriers'},
+    { value: 'time', label: 'Time Constraints' },
+    { value: 'confidence', label: 'Lack of Confidence' }
   ];
 
   const handleNext = () => {
@@ -115,7 +115,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Name / आपका नाम
+                Your Name 
               </label>
               <input
                 type="text"
@@ -128,7 +128,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Age / उम्र
+                Age 
               </label>
               <input
                 type="number"
@@ -142,7 +142,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Location (City/State) / स्थान (शहर/राज्य)
+                Location (City/State) 
               </label>
               <input
                 type="text"
@@ -155,13 +155,13 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Preferred Language / पसंदीदा भाषा
+                Preferred Language 
               </label>
               <div className="grid grid-cols-3 gap-3">
                 {[
                   { value: 'english', label: 'English' },
-                  { value: 'hindi', label: 'हिंदी' },
-                  { value: 'mixed', label: 'Both / दोनों' }
+                  { value: 'hindi', label: 'Hindi' },
+                  { value: 'mixed', label: 'Both' }
                 ].map(option => (
                   <button
                     key={option.value}
@@ -185,14 +185,12 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                What interests you? / आपकी रुचि किसमें है?
+                What interests you? 
               </h3>
               <p className="text-gray-600 mb-4">
                 Select all that apply. Don't worry if you're unsure - we'll help you explore!
               </p>
-              <p className="text-sm text-gray-500 mb-6 font-hindi">
-                जो भी लागू हो उसे चुनें। चिंता न करें यदि आप अनिश्चित हैं - हम आपकी खोज में मदद करेंगे!
-              </p>
+              
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -207,7 +205,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
                   }`}
                 >
                   <div className="font-medium">{option.label}</div>
-                  <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div>
+                  {/* <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div> */}
                 </button>
               ))}
             </div>
@@ -219,14 +217,11 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                What challenges are you facing? / आप किन चुनौतियों का सामना कर रहे हैं?
-              </h3>
+                What challenges are you facing?              </h3>
               <p className="text-gray-600 mb-4">
                 It's okay to have constraints. We'll work around them to find the best path for you.
               </p>
-              <p className="text-sm text-gray-500 mb-6 font-hindi">
-                बाधाएं होना ठीक है। हम आपके लिए सबसे अच्छा रास्ता खोजने के लिए उनके आसपास काम करेंगे।
-              </p>
+              
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -241,7 +236,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
                   }`}
                 >
                   <div className="font-medium">{option.label}</div>
-                  <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div>
+                  {/* <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div> */}
                 </button>
               ))}
             </div>
@@ -249,7 +244,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Budget for learning (₹) / सीखने के लिए बजट (₹)
+                  Budget for learning (₹) 
                 </label>
                 <input
                   type="range"
@@ -267,7 +262,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Time available per week (hours) / प्रति सप्ताह उपलब्ध समय (घंटे)
+                  Time available per week (hours) 
                 </label>
                 <input
                   type="range"
@@ -291,8 +286,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                How do you learn best? / आप सबसे अच्छा कैसे सीखते हैं?
-              </h3>
+                How do you learn best?               </h3>
               <p className="text-gray-600 mb-6">
                 Understanding your learning style helps us recommend the right courses and resources.
               </p>
@@ -300,10 +294,10 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { value: 'visual', label: 'Visual Learner', description: 'Learn through images, diagrams, and videos', descriptionHindi: 'चित्र, आरेख और वीडियो के माध्यम से सीखें' },
-                { value: 'auditory', label: 'Auditory Learner', description: 'Learn through listening and discussion', descriptionHindi: 'सुनने और चर्चा के माध्यम से सीखें' },
-                { value: 'kinesthetic', label: 'Hands-on Learner', description: 'Learn through practice and doing', descriptionHindi: 'अभ्यास और करने के माध्यम से सीखें' },
-                { value: 'mixed', label: 'Mixed Approach', description: 'Combination of all learning styles', descriptionHindi: 'सभी सीखने की शैलियों का संयोजन' }
+                { value: 'visual', label: 'Visual Learner', description: 'Learn through images, diagrams, and videos' },
+                { value: 'auditory', label: 'Auditory Learner', description: 'Learn through listening and discussion' },
+                { value: 'kinesthetic', label: 'Hands-on Learner', description: 'Learn through practice and doing' },
+                { value: 'mixed', label: 'Mixed Approach', description: 'Combination of all learning styles'}
               ].map(option => (
                 <button
                   key={option.value}
@@ -316,7 +310,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
                 >
                   <div className="font-medium mb-1">{option.label}</div>
                   <div className="text-sm text-gray-600">{option.description}</div>
-                  <div className="text-sm text-gray-500 font-hindi">{option.descriptionHindi}</div>
+                  {/* <div className="text-sm text-gray-500 font-hindi">{option.labelHindi}</div> */}
                 </button>
               ))}
             </div>
@@ -328,7 +322,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Academic Background / शैक्षणिक पृष्ठभूमि
+                Academic Background 
               </h3>
               <p className="text-gray-600 mb-6">
                 This helps us understand your academic journey. No judgment here - every path is valid!
@@ -338,7 +332,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Class 10 Percentage / कक्षा 10 प्रतिशत
+                  Class 10 Percentage 
                 </label>
                 <input
                   type="number"
@@ -352,7 +346,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Class 12 Percentage / कक्षा 12 प्रतिशत
+                  Class 12 Percentage 
                 </label>
                 <input
                   type="number"
@@ -367,7 +361,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Competitive Exam Attempts / प्रतियोगी परीक्षा के प्रयास
+                Competitive Exam Attempts 
               </label>
               <div className="grid grid-cols-4 gap-3">
                 {[0, 1, 2, 3].map(attempts => (
@@ -393,7 +387,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Quick Personality Check / त्वरित व्यक्तित्व जांच
+                Quick Personality Check 
               </h3>
               <p className="text-gray-600 mb-6">
                 Rate yourself on these traits. Be honest - there are no right or wrong answers!
@@ -402,11 +396,11 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             
             <div className="space-y-6">
               {[
-                { key: 'grit', label: 'Persistence & Determination', labelHindi: 'दृढ़ता और संकल्प', description: 'How well do you stick to long-term goals?' },
-                { key: 'openness', label: 'Openness to New Experiences', labelHindi: 'नए अनुभवों के लिए खुलापन', description: 'How comfortable are you with trying new things?' },
-                { key: 'verbalPreference', label: 'Verbal Skills', labelHindi: 'मौखिक कौशल', description: 'How comfortable are you with reading, writing, and communication?' },
-                { key: 'quantPreference', label: 'Quantitative Skills', labelHindi: 'मात्रात्मक कौशल', description: 'How comfortable are you with numbers and logical reasoning?' },
-                { key: 'visualPreference', label: 'Visual-Spatial Skills', labelHindi: 'दृश्य-स्थानिक कौशल', description: 'How well do you work with visual information and spatial relationships?' }
+                { key: 'grit', label: 'Persistence & Determination', description: 'How well do you stick to long-term goals?' },
+                { key: 'openness', label: 'Openness to New Experiences', description: 'How comfortable are you with trying new things?' },
+                { key: 'verbalPreference', label: 'Verbal Skills',  description: 'How comfortable are you with reading, writing, and communication?' },
+                { key: 'quantPreference', label: 'Quantitative Skills', description: 'How comfortable are you with numbers and logical reasoning?' },
+                { key: 'visualPreference', label: 'Visual-Spatial Skills', description: 'How well do you work with visual information and spatial relationships?' }
               ].map(trait => (
                 <div key={trait.key}>
                   <div className="flex justify-between items-center mb-2">
@@ -414,7 +408,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
                       <label className="block text-sm font-medium text-gray-700">
                         {trait.label}
                       </label>
-                      <p className="text-xs text-gray-500 font-hindi">{trait.labelHindi}</p>
+                      {/* <div className="text-sm text-gray-500 font-hindi">{trait.descriptionHindi}</div> */}
                     </div>
                     <span className="text-lg font-semibold text-orange-600">
                       {formData.psychometric[trait.key as keyof typeof formData.psychometric]}/10
@@ -451,7 +445,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-2xl font-bold text-gray-900">
-              Career Assessment / करियर मूल्यांकन
+              Career Assessment 
             </h2>
             <span className="text-sm text-gray-500">
               Step {currentStep + 1} of {steps.length}
@@ -490,9 +484,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onComplete, onBack }) => {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               {steps[currentStep].title}
             </h3>
-            <p className="text-gray-600 font-hindi">
-              {steps[currentStep].titleHindi}
-            </p>
+            
           </div>
           
           {renderStep()}

@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
               <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                 Astral
               </h1>
-              <p className="text-xs text-gray-600 font-hindi">एस्ट्रल - आपका करियर साथी</p>
+              <p className="text-xs text-gray-600 font-hindi">Astral – Your Career Companion</p>
             </div>
           </div>
           
