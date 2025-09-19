@@ -10,44 +10,44 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
     {
       icon: Target,
       title: 'Personalized Career Paths',
-      titleHindi: 'व्यक्तिगत करियर पथ',
+      //titleHindi: 'व्यक्तिगत करियर पथ',
       description: 'AI-powered recommendations based on your interests, skills, and constraints',
-      descriptionHindi: 'आपकी रुचियों, कौशल और बाधाओं के आधार पर AI-संचालित सिफारिशें'
+      //descriptionHindi: 'आपकी रुचियों, कौशल और बाधाओं के आधार पर AI-संचालित सिफारिशें'
     },
     {
       icon: BookOpen,
       title: 'Free Learning Resources',
-      titleHindi: 'मुफ्त शिक्षा संसाधन',
+      //titleHindi: 'मुफ्त शिक्षा संसाधन',
       description: 'Access to SWAYAM, NPTEL, and other quality courses at no cost',
-      descriptionHindi: 'स्वयं, एनपीटीईएल और अन्य गुणवत्तापूर्ण पाठ्यक्रमों तक मुफ्त पहुंच'
+      //descriptionHindi: 'स्वयं, एनपीटीईएल और अन्य गुणवत्तापूर्ण पाठ्यक्रमों तक मुफ्त पहुंच'
     },
     {
       icon: TrendingUp,
       title: 'Skill-First Approach',
-      titleHindi: 'कौशल-प्रथम दृष्टिकोण',
+      //titleHindi: 'कौशल-प्रथम दृष्टिकोण',
       description: 'Focus on practical skills that employers actually need',
-      descriptionHindi: 'व्यावहारिक कौशल पर ध्यान दें जिनकी नियोक्ताओं को वास्तव में आवश्यकता है'
+      //descriptionHindi: 'व्यावहारिक कौशल पर ध्यान दें जिनकी नियोक्ताओं को वास्तव में आवश्यकता है'
     },
     {
       icon: Shield,
       title: 'Mental Health Support',
-      titleHindi: 'मानसिक स्वास्थ्य सहायता',
+      //titleHindi: 'मानसिक स्वास्थ्य सहायता',
       description: 'Built-in wellbeing checks and crisis support resources',
-      descriptionHindi: 'अंतर्निहित कल्याण जांच और संकट सहायता संसाधन'
+      //descriptionHindi: 'अंतर्निहित कल्याण जांच और संकट सहायता संसाधन'
     },
     {
       icon: Users,
       title: 'Parent Involvement',
-      titleHindi: 'माता-पिता की भागीदारी',
+      //titleHindi: 'माता-पिता की भागीदारी',
       description: 'Clear communication tools to help parents understand your chosen path',
-      descriptionHindi: 'माता-पिता को आपके चुने गए पथ को समझने में मदद करने के लिए स्पष्ट संचार उपकरण'
+      //descriptionHindi: 'माता-पिता को आपके चुने गए पथ को समझने में मदद करने के लिए स्पष्ट संचार उपकरण'
     },
     {
       icon: Globe,
       title: 'Multiple Pathways',
-      titleHindi: 'कई मार्ग',
+      //titleHindi: 'कई मार्ग',
       description: 'Explore vocational, diploma, degree, and skill-based career options',
-      descriptionHindi: 'व्यावसायिक, डिप्लोमा, डिग्री और कौशल-आधारित करियर विकल्पों का अन्वेषण करें'
+      //descriptionHindi: 'व्यावसायिक, डिप्लोमा, डिग्री और कौशल-आधारित करियर विकल्पों का अन्वेषण करें'
     }
   ];
 
@@ -84,9 +84,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
             <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
               AI-powered career guidance for Indian students who feel "stuck" after 12th grade
             </p>
-            <p className="text-lg text-gray-500 mb-8 max-w-3xl mx-auto font-hindi">
-              12वीं के बाद "फंसे हुए" महसूस करने वाले भारतीय छात्रों के लिए AI-संचालित करियर मार्गदर्शन
-            </p>
+            
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button
@@ -119,7 +117,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
                   {stat.number}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
-                <div className="text-sm text-gray-500 font-hindi">{stat.labelHindi}</div>
+                {/* <div className="text-gray-600">{stat.labelHindi}</div> */}
               </div>
             ))}
           </div>
@@ -136,9 +134,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We understand the unique challenges faced by Indian students and provide personalized, practical solutions
             </p>
-            <p className="text-lg text-gray-500 mt-2 font-hindi">
-              हम भारतीय छात्रों की अनूठी चुनौतियों को समझते हैं और व्यक्तिगत, व्यावहारिक समाधान प्रदान करते हैं
-            </p>
+            
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,15 +146,11 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-3 font-hindi">
-                  {feature.titleHindi}
-                </p>
+                
                 <p className="text-gray-600 mb-2">
                   {feature.description}
                 </p>
-                <p className="text-sm text-gray-500 font-hindi">
-                  {feature.descriptionHindi}
-                </p>
+                
               </div>
             ))}
           </div>
@@ -174,9 +166,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
           <p className="text-xl text-orange-100 mb-4">
             Join thousands of students who have discovered their perfect career match
           </p>
-          <p className="text-lg text-orange-200 mb-8 font-hindi">
-            हजारों छात्रों में शामिल हों जिन्होंने अपना सही करियर मैच खोजा है
-          </p>
+          
           <button
             onClick={onStartJourney}
             className="bg-white text-orange-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-orange-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2 mx-auto"

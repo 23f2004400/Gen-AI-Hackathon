@@ -206,9 +206,7 @@ function App() {
             <p className="text-gray-400 mb-2">
               Astral - Empowering Indian students to find their perfect career path
             </p>
-            <p className="text-sm text-gray-500 font-hindi mb-4">
-              एस्ट्रल - भारतीय छात्रों को उनका सही करियर पथ खोजने में सशक्त बनाना
-            </p>
+          
             <p className="text-xs text-gray-500">
               © 2025 Astral. Built with ❤️ for Indian students.
             </p>

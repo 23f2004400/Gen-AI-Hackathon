@@ -27,10 +27,10 @@ export interface UserProfile {
 export interface CareerPath {
   id: string;
   title: string;
-  titleHindi: string;
+  
   type: 'skill-first' | 'degree-light' | 'degree-plus';
   description: string;
-  descriptionHindi: string;
+  
   entryRoles: string[];
   growthLadder: string[];
   requiredSkills: string[];

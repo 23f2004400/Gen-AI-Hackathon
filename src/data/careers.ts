@@ -5,10 +5,9 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'software-support',
     title: 'Software Support Engineer',
-    titleHindi: 'सॉफ्टवेयर सपोर्ट इंजीनियर',
     type: 'skill-first',
     description: 'Help users solve technical problems and maintain software systems',
-    descriptionHindi: 'उपयोगकर्ताओं की तकनीकी समस्याओं को हल करें और सॉफ्टवेयर सिस्टम बनाए रखें',
+    
     entryRoles: ['Technical Support Associate', 'Help Desk Technician', 'Customer Support Specialist'],
     growthLadder: ['Support Engineer', 'Senior Support Engineer', 'Support Team Lead', 'Technical Manager'],
     requiredSkills: ['Problem Solving', 'Communication', 'Basic Programming', 'Database Knowledge', 'Networking'],
@@ -29,10 +28,10 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'data-associate',
     title: 'Data Associate',
-    titleHindi: 'डेटा एसोसिएट',
+    
     type: 'skill-first',
     description: 'Collect, clean, and analyze data to help businesses make informed decisions',
-    descriptionHindi: 'व्यवसायों को सूचित निर्णय लेने में मदद करने के लिए डेटा एकत्र, साफ और विश्लेषण करें',
+    
     entryRoles: ['Data Entry Specialist', 'Junior Data Analyst', 'Research Associate'],
     growthLadder: ['Data Analyst', 'Senior Data Analyst', 'Data Scientist', 'Analytics Manager'],
     requiredSkills: ['Excel', 'SQL', 'Python/R', 'Statistics', 'Data Visualization'],
@@ -53,10 +52,9 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'digital-marketing',
     title: 'Digital Marketing Associate',
-    titleHindi: 'डिजिटल मार्केटिंग एसोसिएट',
     type: 'skill-first',
     description: 'Create and manage online marketing campaigns across various digital platforms',
-    descriptionHindi: 'विभिन्न डिजिटल प्लेटफॉर्म पर ऑनलाइन मार्केटिंग अभियान बनाएं और प्रबंधित करें',
+    
     entryRoles: ['Social Media Executive', 'Content Writer', 'SEO Associate'],
     growthLadder: ['Digital Marketing Specialist', 'Marketing Manager', 'Growth Manager', 'Marketing Director'],
     requiredSkills: ['Social Media', 'Content Creation', 'SEO/SEM', 'Analytics', 'Graphic Design'],
@@ -76,10 +74,10 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'ux-designer',
     title: 'UX/UI Designer',
-    titleHindi: 'यूएक्स/यूआई डिजाइनर',
+
     type: 'skill-first',
     description: 'Design user-friendly interfaces and experiences for websites and mobile apps',
-    descriptionHindi: 'वेबसाइटों और मोबाइल ऐप्स के लिए उपयोगकर्ता-अनुकूल इंटरफेस और अनुभव डिज़ाइन करें',
+    
     entryRoles: ['Junior UI Designer', 'Visual Designer', 'Design Intern'],
     growthLadder: ['UX Designer', 'Senior UX Designer', 'Lead Designer', 'Design Manager'],
     requiredSkills: ['Figma/Adobe XD', 'User Research', 'Prototyping', 'Visual Design', 'HTML/CSS'],
@@ -99,10 +97,9 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'bca-developer',
     title: 'Software Developer (BCA Track)',
-    titleHindi: 'सॉफ्टवेयर डेवलपर (बीसीए ट्रैक)',
+    
     type: 'degree-plus',
     description: 'Develop software applications while pursuing BCA degree with practical projects',
-    descriptionHindi: 'व्यावहारिक परियोजनाओं के साथ बीसीए डिग्री करते हुए सॉफ्टवेयर एप्लिकेशन विकसित करें',
     entryRoles: ['Trainee Developer', 'Junior Programmer', 'Software Intern'],
     growthLadder: ['Software Developer', 'Senior Developer', 'Tech Lead', 'Engineering Manager'],
     requiredSkills: ['Programming Languages', 'Database Management', 'Web Development', 'Problem Solving', 'Version Control'],
@@ -123,10 +120,8 @@ export const careerPaths: CareerPath[] = [
   {
     id: 'open-uni-business',
     title: 'Business Operations (Open University)',
-    titleHindi: 'बिजनेस ऑपरेशन्स (ओपन यूनिवर्सिटी)',
     type: 'degree-light',
     description: 'Manage business operations while studying through distance learning',
-    descriptionHindi: 'दूरस्थ शिक्षा के माध्यम से अध्ययन करते हुए व्यावसायिक संचालन का प्रबंधन करें',
     entryRoles: ['Operations Assistant', 'Business Coordinator', 'Administrative Associate'],
     growthLadder: ['Operations Executive', 'Operations Manager', 'Business Manager', 'General Manager'],
     requiredSkills: ['Communication', 'Project Management', 'Data Analysis', 'Process Optimization', 'Leadership'],

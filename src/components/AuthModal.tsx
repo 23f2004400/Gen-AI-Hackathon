@@ -64,7 +64,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
             {mode === 'signup' && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name / पूरा नाम
+                  Full Name 
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -82,7 +82,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email / ईमेल
+                Email 
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -101,7 +101,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
               <>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number / फोन नंबर
+                    Phone Number 
                   </label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -118,7 +118,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Location / स्थान
+                    Location 
                   </label>
                   <div className="relative">
                     <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -137,7 +137,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Password / पासवर्ड
+                Password 
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -155,7 +155,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, mode, onClose, onSubmit, 
             {mode === 'signup' && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Confirm Password / पासवर्ड की पुष्टि करें
+                  Confirm Password 
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
