@@ -9,7 +9,7 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Beginner',
     skills: ['Python', 'Programming Logic', 'Data Structures'],
-    url: 'https://swayam.gov.in/nd1_noc20_cs73',
+    url: 'https://www.coursera.org/search?query=free',
     rating: 4.5,
     language: ['English', 'Hindi']
   },
@@ -21,7 +21,7 @@ export const courses: Course[] = [
     cost: 1000,
     difficulty: 'Beginner',
     skills: ['Data Analysis', 'Statistics', 'Python', 'Visualization'],
-    url: 'https://nptel.ac.in/courses/106/106/106106179/',
+    url: 'https://www.coursera.org/search?query=free',
     rating: 4.3,
     language: ['English']
   },
@@ -33,7 +33,7 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Beginner',
     skills: ['SEO', 'Social Media Marketing', 'Content Marketing', 'Analytics'],
-    url: 'https://swayam.gov.in/nd1_noc19_mg20',
+    url: 'https://ocw.mit.edu/',
     rating: 4.2,
     language: ['English', 'Hindi']
   },
@@ -45,7 +45,7 @@ export const courses: Course[] = [
     cost: 1000,
     difficulty: 'Beginner',
     skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-    url: 'https://nptel.ac.in/courses/106/106/106106203/',
+    url: 'https://www.geeksforgeeks.org/',
     rating: 4.4,
     language: ['English']
   },
@@ -57,7 +57,7 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Intermediate',
     skills: ['SQL', 'Database Design', 'Data Modeling', 'MySQL'],
-    url: 'https://swayam.gov.in/nd1_noc20_cs06',
+    url: 'https://ocw.mit.edu/',
     rating: 4.1,
     language: ['English']
   },
@@ -69,7 +69,7 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Beginner',
     skills: ['UI Design', 'UX Principles', 'Figma', 'Prototyping'],
-    url: 'https://swayam.gov.in/nd1_noc19_de12',
+    url: 'https://www.geeksforgeeks.org/',
     rating: 4.0,
     language: ['English', 'Hindi']
   },
@@ -81,7 +81,7 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Beginner',
     skills: ['Communication', 'Presentation', 'Writing', 'Professional Skills'],
-    url: 'https://nptel.ac.in/courses/109/109/109109112/',
+    url: 'https://www.investopedia.com/',
     rating: 4.3,
     language: ['English']
   },
@@ -93,8 +93,117 @@ export const courses: Course[] = [
     cost: 0,
     difficulty: 'Intermediate',
     skills: ['Excel', 'Data Analysis', 'Pivot Tables', 'Macros'],
-    url: 'https://swayam.gov.in/nd1_noc20_mg17',
+    url: 'https://www.geeksforgeeks.org/',
     rating: 4.2,
     language: ['English', 'Hindi']
-  }
+  },
+
+{
+  id: 'stock-market-basics',
+  title: 'Introduction to Stock Markets',
+  provider: 'SWAYAM',
+  duration: '6 weeks',
+  cost: 0,
+  difficulty: 'Beginner',
+  skills: ['Stock Market', 'Trading', 'Equity Analysis'],
+  url: 'https://www.nseindia.com/learn',
+  rating: 4.5,
+  language: ['English', 'Hindi']
+},
+{
+  id: 'business-law',
+  title: 'Corporate & Business Law',
+  provider: 'SWAYAM',
+  duration: '10 weeks',
+  cost: 0,
+  difficulty: 'Intermediate',
+  skills: ['Business Law', 'Contracts', 'Corporate Governance'],
+  url: 'https://swayam.gov.in/',
+  rating: 4.2,
+  language: ['English']
+},
+{
+  id: 'entrepreneurship-basics',
+  title: 'Entrepreneurship Essentials',
+  provider: 'NPTEL',
+  duration: '6 weeks',
+  cost: 0,
+  difficulty: 'Beginner',
+  skills: ['Entrepreneurship', 'Startup Planning', 'Business Models'],
+  url: 'https://nptel.ac.in/courses/110/104/110104126/',
+  rating: 4.3,
+  language: ['English']
+},
+{
+  id: 'finance-fundamentals',
+  title: 'Corporate Finance Essentials',
+  provider: 'SWAYAM',
+  duration: '5 weeks',
+  cost: 0,
+  difficulty: 'Intermediate',
+  skills: ['Corporate Finance', 'Investment', 'Risk Management'],
+  url: 'https://www.coursera.org/learn/corporate-finance-essentials',
+  rating: 4.6,
+  language: ['English']
+},
+{
+  id: 'gst-training',
+  title: 'GST and Indirect Taxes',
+  provider: 'SWAYAM',
+  duration: '6 weeks',
+  cost: 0,
+  difficulty: 'Intermediate',
+  skills: ['Taxation', 'GST Filing', 'Indirect Taxes'],
+  url: 'https://swayam.gov.in/',
+  rating: 4.2,
+  language: ['English', 'Hindi']
+},
+{
+  id: 'digital-business',
+  title: 'Digital Business Models',
+  provider: 'NPTEL',
+  duration: '6 weeks',
+  cost: 0,
+  difficulty: 'Beginner',
+  skills: ['Digital Transformation', 'E-Commerce', 'Business Strategy'],
+  url: 'https://nptel.ac.in/courses/110/106/110106148/',
+  rating: 4.3,
+  language: ['English']
+},
+{
+  id: 'first-aid-training',
+  title: 'First Aid and Emergency Care',
+  provider: 'SWAYAM',
+  duration: '4 weeks',
+  cost: 0,
+  difficulty: 'Beginner',
+  skills: ['First Aid', 'CPR', 'Emergency Response'],
+  url: 'https://openwho.org/courses',
+  rating: 4.5,
+  language: ['English', 'Hindi']
+},
+{
+  id: 'public-health',
+  title: 'Foundations of Public Health Practice',
+  provider: 'SWAYAM',
+  duration: '10 weeks',
+  cost: 0,
+  difficulty: 'Intermediate',
+  skills: ['Public Health Systems', 'Community Medicine', 'Health Policy'],
+  url: 'https://swayam.gov.in/',
+  rating: 4.2,
+  language: ['English']
+},
+{
+  id: 'pharmacology-basics',
+  title: 'Introduction to Pharmacology',
+  provider: 'SWAYAM',
+  duration: '7 weeks',
+  cost: 0,
+  difficulty: 'Intermediate',
+  skills: ['Pharmacology', 'Drug Mechanisms', 'Therapeutics'],
+  url: 'https://www.coursera.org/learn/pharmacology',
+  rating: 4.4,
+  language: ['English']
+},
 ];

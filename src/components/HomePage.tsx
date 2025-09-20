@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Target, TrendingUp, Users, Shield, Globe } from 'lucide-react';
 
+
 interface HomePageProps {
   onStartJourney: () => void;
 }
+
 
 const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
   const features = [
@@ -59,7 +61,8 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50">
+    
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50 ">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 py-20">
@@ -69,7 +72,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
               <span>Safe, Supportive, and Judgment-Free</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
               You don't need another{' '}
               <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                 drop year
@@ -128,10 +131,10 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-black mb-4">
               Why Choose Astral?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We understand the unique challenges faced by Indian students and provide personalized, practical solutions
             </p>
             
@@ -141,13 +144,13 @@ const HomePage: React.FC<HomePageProps> = ({ onStartJourney }) => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-700 mb-2">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-2">
+                <p className="text-gray-400 mb-2">
                   {feature.description}
                 </p>
                 
